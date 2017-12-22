@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/text_container2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- MATCH NUMBER -->
+    <TextView
+        android:id="@+id/match_number_for_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <!-- DATE -->
+    <TextView
+        android:id="@+id/match_date_for_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D47A1"
+        android:layout_below="@id/match_number_for_group"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:paddingRight="5dp"/>
+
+    <!-- GAME-->
+    <LinearLayout
+        android:layout_below="@id/match_date_for_group"
+        android:id="@+id/match_teams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/away_team_image_for_group"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="4dp"/>
+        <TextView
+            android:id="@+id/away_team_for_group"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <TextView
+            android:id="@+id/score_for_group"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/home_team_for_group"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <ImageView
+            android:id="@+id/home_team_image_for_group"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/match_time_for_group"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="6dp"
+            android:textStyle="italic"
+            android:gravity="right|center"/>
+    </LinearLayout>
+
+    <!-- CITY AND STADIUM -->
+    <TextView
+        android:id="@+id/city_and_stadium_for_groups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/match_teams"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textStyle="italic|bold"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/colorForGeneralGamesList"
+        android:visibility="gone"
+        android:fontFamily="sans-serif-thin"/>
+
+</RelativeLayout>
