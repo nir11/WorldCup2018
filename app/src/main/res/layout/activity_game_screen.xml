@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.worldcup2018details.GameScreenActivity"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/group_nunber_for_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="בית א"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_home_team_for_screen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:src="@mipmap/russia" />
+
+        <TextView
+            android:id="@+id/home_team_for_screen"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@id/image_home_team_for_screen"
+            android:gravity="center"
+            android:text="רוסיה"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/line_for_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/away_team_for_screen"
+            android:layout_toLeftOf="@id/home_team_for_screen"
+            android:text="-"
+            android:textSize="50sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="visible"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/away_team_for_screen"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/image_away_team_for_screen"
+            android:gravity="center"
+            android:text="ערב הסעודית"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/image_away_team_for_screen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="16dp"
+            android:src="@mipmap/saudi_arabia" />
+
+        <TextView
+            android:id="@+id/home_team_result_for_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_team_for_screen"
+            android:layout_toLeftOf="@id/image_home_team_for_screen"
+            android:text="3"
+            android:textSize="50sp"
+            android:layout_marginRight="16dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/away_team_result_for_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/away_team_for_screen"
+            android:layout_toRightOf="@id/image_away_team_for_screen"
+            android:text="0"
+            android:textSize="50sp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/before_result_for_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/away_team_for_screen"
+            android:layout_toRightOf="@id/away_team_result_for_screen"
+            android:layout_toLeftOf="@id/home_team_result_for_screen"
+            android:text="-"
+            android:textSize="50sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="visible"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/stadium_for_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="איצטדיון לוז'ינקי, מוסקבה"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:layout_below="@id/home_team_result_for_screen"
+            android:layout_toLeftOf="@id/home_team_result_for_screen"
+            />
+        <ImageButton
+            android:id="@+id/google_maps_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/google_maps"
+            android:layout_toLeftOf="@id/stadium_for_screen"
+            android:layout_below="@id/away_team_result_for_screen"
+            android:background="@android:color/white"
+            android:padding="4dp"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

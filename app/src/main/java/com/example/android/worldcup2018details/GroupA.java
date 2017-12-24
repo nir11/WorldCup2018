@@ -1,6 +1,7 @@
 package com.example.android.worldcup2018details;
 
 import android.content.Intent;
+import android.media.midi.MidiDevice;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -12,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,10 +36,10 @@ public class GroupA extends AppCompatActivity {
         setContentView(R.layout.activity_list_for_groups);
 
         // GROUP A
-        Team RUSSIA = new Team("רוסיה", R.mipmap.russia, "בית א", 1, 0, 0, 0, 0, "-", 0 );
-        Team URUGUAY = new Team("אורוגוואי", R.mipmap.uruguay, "בית א", 2, 0, 0, 0, 0, "-", 0 );
-        Team EGYPT = new Team("מצרים", R.mipmap.egypt, "בית א", 3, 0, 0, 0, 0, "-", 0 );
-        Team SAUDI_ARABIA = new Team("ערב הסעודית", R.mipmap.saudi_arabia, "בית א", 4, 0, 0, 0, 0, "-", 0 );
+        Team RUSSIA = new Team("רוסיה", R.mipmap.russia, "בית א", 1, 0, 0, 0, 0, "-", 0);
+        Team URUGUAY = new Team("אורוגוואי", R.mipmap.uruguay, "בית א", 2, 0, 0, 0, 0, "-", 0);
+        Team EGYPT = new Team("מצרים", R.mipmap.egypt, "בית א", 3, 0, 0, 0, 0, "-", 0);
+        Team SAUDI_ARABIA = new Team("ערב הסעודית", R.mipmap.saudi_arabia, "בית א", 4, 0, 0, 0, 0, "-", 0);
 
         // STADIUMS
         Stadium LUZHNIKI_STADIUM = new Stadium("אצטדיון לוז'ניקי", "מוסקבה", "81,000", 1);
@@ -49,17 +51,17 @@ public class GroupA extends AppCompatActivity {
 
 
         ArrayList<Game> games = new ArrayList<Game>();
-        games.add(new Game(RUSSIA, SAUDI_ARABIA, GROUP_A ,LUZHNIKI_STADIUM,"14/6/18" ,SIX_OCLOCK, true, true,
+        games.add(new Game(RUSSIA, SAUDI_ARABIA, GROUP_A, LUZHNIKI_STADIUM, "14/6/18", SIX_OCLOCK, true, true,
                 true, 1, "-", 1));
-        games.add(new Game(EGYPT, URUGUAY, GROUP_A ,CENTRAL_STADIUM,"15/6/18" ,THREE_OCLOCK, true, false,
+        games.add(new Game(EGYPT, URUGUAY, GROUP_A, CENTRAL_STADIUM, "15/6/18", THREE_OCLOCK, true, false,
                 true, 1, "-", 2));
-        games.add(new Game(RUSSIA, EGYPT, GROUP_A ,KRESTOVSKY_STADIUM,"19/6/18" ,NINE_OCLOCK, false, true,
+        games.add(new Game(RUSSIA, EGYPT, GROUP_A, KRESTOVSKY_STADIUM, "19/6/18", NINE_OCLOCK, false, true,
                 true, 2, "-", 3));
-        games.add(new Game(URUGUAY, SAUDI_ARABIA, GROUP_A ,ROSTOV_ARENA,"20/6/18" ,SIX_OCLOCK, false, false,
+        games.add(new Game(URUGUAY, SAUDI_ARABIA, GROUP_A, ROSTOV_ARENA, "20/6/18", SIX_OCLOCK, false, false,
                 true, 2, "-", 4));
-        games.add(new Game(SAUDI_ARABIA, EGYPT, GROUP_A ,VOLGOGRAD_ARENA,"25/6/18" ,FIVE_OCLOCK, true, true,
+        games.add(new Game(SAUDI_ARABIA, EGYPT, GROUP_A, VOLGOGRAD_ARENA, "25/6/18", FIVE_OCLOCK, true, true,
                 true, 3, "-", 5));
-        games.add(new Game(URUGUAY, RUSSIA, GROUP_A ,COSMOS_ARENA,"25/6/18" ,FIVE_OCLOCK, false, false,
+        games.add(new Game(URUGUAY, RUSSIA, GROUP_A, COSMOS_ARENA, "25/6/18", FIVE_OCLOCK, false, false,
                 false, 3, "-", 6));
 
 
@@ -71,7 +73,6 @@ public class GroupA extends AppCompatActivity {
         View footer = getLayoutInflater().inflate(R.layout.activity_game_list_for_group, null);
         listView.addHeaderView(header);
         listView.addFooterView(footer);
-
 
 
         ImageButton forwardButton = (ImageButton) findViewById(R.id.forward_button);
@@ -91,8 +92,47 @@ public class GroupA extends AppCompatActivity {
             public void onClick(View view) {
                 Intent numbersIntent = new Intent(GroupA.this, GroupH.class);
                 startActivity(numbersIntent);
+
             }
         });
+
+        TableRow row1 = (TableRow) findViewById(R.id.row1);
+        row1.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(GroupA.this, MainActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+        TableRow row2 = (TableRow) findViewById(R.id.row2);
+        row2.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(GroupA.this, MainActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+        TableRow row3 = (TableRow) findViewById(R.id.row3);
+        row3.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(GroupA.this, MainActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+        TableRow row4 = (TableRow) findViewById(R.id.row4);
+        row4.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(GroupA.this, MainActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+
 
         Team[] teams = new Team[4];
         teams[0] = RUSSIA;
@@ -102,7 +142,17 @@ public class GroupA extends AppCompatActivity {
         Table groupA = new Table(teams);
 
 
-        TextView groupNumberTextView = (TextView)findViewById(R.id.group_number_text);
+
+        TextView pointsToastTextView = (TextView)findViewById(R.id.toast_points);
+        pointsToastTextView.setOnClickListener(new View.OnClickListener(){
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getBaseContext(),"נקודות", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        TextView groupNumberTextView = (TextView) findViewById(R.id.group_number_text);
         groupNumberTextView.setText(groupA.getFirstPlace().getGroupNumber());
 
         //First Place table
@@ -169,7 +219,6 @@ public class GroupA extends AppCompatActivity {
         firstPositionPoints2.setText(String.valueOf(groupA.getSecondPlace().getPoints()));
 
 
-
         //Third Place table
         TextView firstPositionNameTextView3 = (TextView) findViewById(R.id.third_place_name);
         if (groupA.getThirdPlace().getName() == "ערב הסעודית")
@@ -233,6 +282,7 @@ public class GroupA extends AppCompatActivity {
         TextView firstPositionPoints4 = (TextView) findViewById(R.id.fourth_position_points);
         firstPositionPoints4.setText(String.valueOf(groupA.getFourthPlace().getPoints()));
     }
+
 
 
 }

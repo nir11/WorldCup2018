@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -205,11 +206,13 @@ public class ScheduleActivity extends AppCompatActivity {
                 false, 3, "-", 6));
 
 
-
-
         GameAdapter adapter = new GameAdapter(this, games, R.color.colorForGeneralGamesList);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
+
+
+
+
 
 
 

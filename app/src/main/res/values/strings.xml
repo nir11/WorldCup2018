@@ -2,5 +2,7 @@
     <string name="app_name">מונדיאל 2018</string>
     <string name="category_schedule">לוח זמנים</string>
     <string name="Group">מונדיאל 2018</string>
+    <string name="title_activity_maps">Map</string>
+
 
 </resources>

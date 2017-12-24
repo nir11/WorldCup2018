@@ -210,7 +210,8 @@ android:id="@+id/activity_group_details">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="700"
-        android:background="#FFFFFF">
+        android:background="@android:drawable/list_selector_background"
+        android:id="@+id/row1" >
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -353,7 +354,8 @@ android:id="@+id/activity_group_details">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="700"
-        android:background="#FFFFFF">
+        android:id="@+id/row2"
+        android:background="@android:drawable/list_selector_background">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -497,8 +499,9 @@ android:id="@+id/activity_group_details">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="700"
-        android:background="#FFFFFF">
-        <TextView
+        android:id="@+id/row3"
+        android:background="@android:drawable/list_selector_background">
+    <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -641,8 +644,8 @@ android:id="@+id/activity_group_details">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="700"
-        android:background="#FFFFFF"
-        >
+        android:id="@+id/row4"
+        android:background="@android:drawable/list_selector_background">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -5,6 +5,7 @@ package com.example.android.worldcup2018details;
  */
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -29,7 +31,7 @@ public class GameAdapter extends ArrayAdapter<Game> {
     }
 
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
@@ -72,7 +74,16 @@ public class GameAdapter extends ArrayAdapter<Game> {
         TextView scoreTextView = (TextView)listItemView.findViewById(R.id.score);
         scoreTextView.setText(currentGame.getScore());
 
-        View textContainer = listItemView.findViewById(R.id.text_container);
+        LinearLayout linearLayout = (LinearLayout)listItemView.findViewById(R.id.text_container);
+        linearLayout.setOnClickListener(new View.OnClickListener(){
+        // The code in this method will be executed when the numbers View is clicked on.
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(getContext(),"סתם" + position, Toast.LENGTH_SHORT).show();
+        }
+        });
+
+        View textContainer = listItemView.findViewById(R.id.text_container); // set color for the linear layout called text_container
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         textContainer.setBackgroundColor(color);
         return listItemView;

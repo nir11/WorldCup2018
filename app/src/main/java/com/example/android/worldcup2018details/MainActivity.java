@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-                Intent numbersIntent = new Intent(MainActivity.this, GameDetails.class);
+                Intent numbersIntent = new Intent(MainActivity.this, GameScreenActivity.class);
                 startActivity(numbersIntent);
             }
         });
@@ -47,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent numbersIntent = new Intent(MainActivity.this, GroupA.class);
+                startActivity(numbersIntent);
+            }
+        });
+
+
+        Button teamsButton = (Button) findViewById(R.id.teams_button);
+        teamsButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent numbersIntent = new Intent(MainActivity.this, TeamsActivity.class);
                 startActivity(numbersIntent);
             }
         });

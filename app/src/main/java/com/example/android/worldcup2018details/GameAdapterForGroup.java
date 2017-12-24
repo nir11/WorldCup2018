@@ -42,6 +42,13 @@ public class GameAdapterForGroup extends ArrayAdapter<Game> {
         // Get the {@link AndroidFlavor} object located at this position in the list
         Game currentGame = getItem(position);
 
+
+
+
+
+
+
+
         TextView matchNumberTextView = (TextView) listItemView.findViewById(R.id.match_number_for_group);
         if(currentGame.getTotalGameNum()%2 == 1)
             matchNumberTextView.setVisibility(View.VISIBLE);
