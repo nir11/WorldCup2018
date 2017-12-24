@@ -11,13 +11,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Schedule"
+        android:text="לוח זמנים"
         android:id="@+id/schedule_button"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Game Details"
+        android:text="משחקים"
         android:id="@+id/game_details_button"/>
 
     <Button
@@ -25,5 +25,11 @@
         android:layout_height="wrap_content"
         android:text="בתים"
         android:id="@+id/group_details"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="נבחרות"
+        android:id="@+id/teams_button"/>
 
 </LinearLayout>
